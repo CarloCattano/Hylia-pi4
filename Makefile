@@ -33,8 +33,10 @@ endif
 # ----------------------------------------------------------------------------------------------------------------------------
 # Set build and link flags
 
+# TODO - search candidates to replace -msse -msse2 -mfpmath=sse on the raspberry model
+
 BASE_FLAGS = -Wall -Wextra -pipe -MD -MP
-BASE_OPTS  = -O3 -ffast-math -mtune=generic -msse -msse2 -mfpmath=sse -fdata-sections -ffunction-sections
+BASE_OPTS  = -O3 -ffast-math -mtune=generic -fdata-sections -ffunction-sections
 
 ifeq ($(NOOPT),true)
 # No optimization flags
